@@ -1,17 +1,12 @@
-require("dotenv").config()
-require("@nomicfoundation/hardhat-toolbox")
+// Setup: npm install alchemy-sdk
+// Github: https://github.com/alchemyplatform/alchemy-sdk-js
+import { Network, Alchemy } from "alchemy-sdk";
 
-const privateKey = process.env.PRIVATE_KEY || ""
-
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.18",
-  networks: {
-    hardhat: {
-      forking: {
-        url: `https://arb-mainnet.g.alchemy.com/v2/${qJUj3rrIcQNbfVSc6lGFkbHZx0ztGmY4}`,
-        blockNumber: 223528000
-      },
-    }
-  }
+// Optional config object, but defaults to demo api-key and eth-mainnet.
+const settings = {
+  apiKey: "bHz1Ue2GPYnyY5iSxRTJqr9ztIlUj9jB", // Replace with your Alchemy API Key.
+  network: Network.ETH_MAINNET, // Replace with your network.
 };
+const alchemy = new Alchemy(settings);
+
+alchemy.core.getBlock(15221026).then(console.log);
