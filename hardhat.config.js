@@ -1,12 +1,18 @@
-// Setup: npm install alchemy-sdk
-// Github: https://github.com/alchemyplatform/alchemy-sdk-js
-import { Network, Alchemy } from "alchemy-sdk";
+require("@nomiclabs/hardhat-waffle");
+require('dotenv').config();
 
-// Optional config object, but defaults to demo api-key and eth-mainnet.
-const settings = {
-  apiKey: "bHz1Ue2GPYnyY5iSxRTJqr9ztIlUj9jB", // Replace with your Alchemy API Key.
-  network: Network.ETH_MAINNET, // Replace with your network.
+const { ALCHEMY_API_KEY, PRIVATE_KEY } = process.env;
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  solidity: "0.8.4",
+  networks: {
+    hardhat: {},
+    mainnet: {
+      url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [`0x${PRIVATE_KEY}`]
+    }
+  }
 };
-const alchemy = new Alchemy(settings);
-
-alchemy.core.getBlock(15221026).then(console.log);
