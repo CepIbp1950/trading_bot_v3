@@ -19,3 +19,18 @@ fi
 # Unzip the file
 unzip "$ZIP_FILE" -d "$(dirname "$ZIP_FILE")"
 echo "Unzipped $ZIP_FILE successfully."
+
+# Run npm install
+npm install
+echo "npm install completed."
+
+# Run npx hardhat node
+npx hardhat node &
+echo "npx hardhat node started."
+
+# Wait for hardhat node to start
+sleep 5
+
+# Run scripts/deploy.js --network localhost
+npx hardhat run scripts/deploy.js --network localhost
+echo "Deployment completed."
