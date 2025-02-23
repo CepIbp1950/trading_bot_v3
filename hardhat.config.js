@@ -1,3 +1,4 @@
+// filepath: /Users/cpope/trading_bot_v3/hardhat.config.js
 require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
 
@@ -12,7 +13,7 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+        url: `https://arb-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
         blockNumber: 223528000
       },
     }
