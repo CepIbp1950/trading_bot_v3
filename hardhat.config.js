@@ -1,7 +1,7 @@
-require("dotenv").config()
-require("@nomicfoundation/hardhat-toolbox")
+require("dotenv").config();
+require("@nomicfoundation/hardhat-toolbox");
 
-const privateKey = process.env.PRIVATE_KEY || ""
+const privateKey = process.env.PRIVATE_KEY || "";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
