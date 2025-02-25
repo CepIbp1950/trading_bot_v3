@@ -15,6 +15,10 @@ async function checkTokenSymbol() {
   } catch (error) {
     console.error("Error: The contract does not implement the symbol function or there was an issue with the call.");
     console.error("Error details:", error);
+    console.error("Transaction data:", {
+      to: tokenAddress,
+      data: tokenContract.interface.encodeFunctionData("symbol")
+    });
   }
 }
 
