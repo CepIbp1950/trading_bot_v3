@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.JsonRpcProvider(`https://arb-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
+const provider = new ethers.JsonRpcProvider(`https://arb-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
 const tokenAddress = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1";
 const tokenABI = [
   "function symbol() view returns (string)"
