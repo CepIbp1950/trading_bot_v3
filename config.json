@@ -3,10 +3,7 @@
         "isLocal": true,
         "isDeployed": true,
         "ARBITRAGE_ADDRESS": "0xBcA21A2e4c0b2Dc1279a282E6e6d8FaC8d88adAd",
-<<<<<<< HEAD
         "PRICE_UNITS": 0,
-=======
->>>>>>> 0c7095921a92f81f412d0eac38b2f25c67b379ff
         "PRICE_DIFFERENCE": 0.5,
         "GAS_LIMIT": 600000,
         "GAS_PRICE": 0.00000001
