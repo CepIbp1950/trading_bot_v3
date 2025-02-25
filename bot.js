@@ -4,10 +4,14 @@ require('./helpers/server')
 
 const Big = require('big.js')
 
+const Big = require('big.js')
+
 const ethers = require("ethers")
 const config = require('./config.json')
 const { getTokenAndContract, getPoolContract, getPoolLiquidity, calculatePrice } = require('./helpers/helpers')
-const { provider, uniswap, pancakeswap, arbitrage } = require('./helpers/initialization')
+const { uniswap, pancakeswap, arbitrage } = require('./helpers/initialization')
+
+// Add this line to configure the provider
 const provider = new ethers.JsonRpcProvider(`https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
 
 // -- CONFIGURATION VALUES HERE -- //
