@@ -14,7 +14,11 @@ module.exports = {
     hardhat: {
       forking: {
         url: `https://arb-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+<<<<<<< HEAD
         blockNumber: 126673326// Update this to a valid block number
+=======
+        blockNumber: 223528000
+>>>>>>> 0c7095921a92f81f412d0eac38b2f25c67b379ff
       },
     }
   }

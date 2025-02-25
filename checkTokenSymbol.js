@@ -22,4 +22,8 @@ async function checkTokenSymbol() {
   }
 }
 
+<<<<<<< HEAD
 checkTokenSymbol();
+=======
+checkTokenSymbol();
+>>>>>>> 0c7095921a92f81f412d0eac38b2f25c67b379ff
