@@ -14,6 +14,7 @@ async function checkTokenSymbol() {
     console.log(`Token symbol: ${symbol}`);
   } catch (error) {
     console.error("Error: The contract does not implement the symbol function or there was an issue with the call.");
+    console.error(error);
   }
 }
 
