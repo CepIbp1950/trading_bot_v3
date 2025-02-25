@@ -6,7 +6,6 @@ const Big = require('big.js')
 
 const ethers = require("ethers")
 const config = require('./config.json')
-const { getTokenAndContract, getPoolContract, getPoolLiquidity, calculatePrice } = require('./helpers/helpers')
 
 // Add this line to configure the provider
 const provider = new ethers.JsonRpcProvider(`https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
