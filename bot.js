@@ -4,8 +4,6 @@ require('./helpers/server')
 
 const Big = require('big.js')
 
-const Big = require('big.js')
-
 const ethers = require("ethers")
 const config = require('./config.json')
 const { getTokenAndContract, getPoolContract, getPoolLiquidity, calculatePrice } = require('./helpers/helpers')
