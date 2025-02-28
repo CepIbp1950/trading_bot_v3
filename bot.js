@@ -1,6 +1,6 @@
 // -- HANDLE INITIAL SETUP -- //
-require("dotenv").config()
-require('./helpers/server')
+require("dotenv").config();
+require('./helpers/server');
 
 const Big = require('big.js')
 
