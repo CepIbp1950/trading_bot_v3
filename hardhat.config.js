@@ -1,4 +1,3 @@
-// filepath: /Users/cpope/trading_bot_v3/hardhat.config.js
 require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
 
@@ -11,11 +10,9 @@ const privateKey = process.env.PRIVATE_KEY || "";
 module.exports = {
   solidity: "0.8.18",
   networks: {
-    hardhat: {
-      forking: {
-        url: `https://arb-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
-        blockNumber: 223528000
-      },
-    }
+    mainnet: {
+      url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+      blockNumber: 223528000
+    },
   }
 };
